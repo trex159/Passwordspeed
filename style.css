@@ -1,0 +1,214 @@
+/* =========================================================
+   Global
+   ========================================================= */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--bg: #f4f6f8;
+	--surface: #ffffff;
+	--surface-hover: #fafbfc;
+	--text: #171a1f;
+    --text-fdbg: #dae3f3;
+	--text-secondary: #69717d;
+	--border: #e2e6eb;
+	--primary: #636d83;
+	--primary-hover: #3d4458;
+	--primary-light: #eff6ff;
+	--radius: 14px;
+	--shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+body {
+	min-height: 100vh;
+	background: var(--bg);
+	color: var(--text);
+	font-family:
+		Inter,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif;
+	line-height: 1.5;
+}
+/* =========================================================
+   Header
+   ========================================================= */
+.Header {
+	width: 100%;
+	padding: 32px 24px;
+	background: var(--surface);
+	border-bottom: 1px solid var(--border);
+}
+.Header h1 {
+	max-width: 1100px;
+	margin: 0 auto;
+	font-size: 28px;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+}
+
+.Header button {
+    margin-top: 10px;
+    margin-left: 1200px;
+    padding: 8px 16px;
+    background-color: var(--primary);
+    color: var(--text-fdbg);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.Header button:hover {
+    background-color: var(--primary-hover);
+    color: var(--text-secondary);
+}
+
+/* =========================================================
+   Intro
+   ========================================================= */
+.Intro {
+	width: min(1100px, calc(100% - 48px));
+	margin: 40px auto 24px;
+	padding: 28px;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+}
+.Intro input {
+	width: 100%;
+}
+/* =========================================================
+   Testarea
+   ========================================================= */
+.Testarea {
+	width: min(1100px, calc(100% - 48px));
+	margin: 0 auto 50px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+}
+/* =========================================================
+   Test Cards
+   ========================================================= */
+.test1,
+.test2 {
+	padding: 30px;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		border-color 0.2s ease;
+}
+.test1:hover,
+.test2:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 35px rgba(15, 23, 42, 0.09);
+	border-color: #d5dae1;
+}
+.test1 h1,
+.test2 h1 {
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 650;
+	letter-spacing: -0.25px;
+}
+/* =========================================================
+   Inputs
+   ========================================================= */
+input {
+	display: block;
+	width: 100%;
+	height: 48px;
+	padding: 0 15px;
+	color: var(--text);
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 10px;
+	outline: none;
+	font: inherit;
+	font-size: 15px;
+	transition:
+		border-color 0.15s ease,
+		box-shadow 0.15s ease,
+		background 0.15s ease;
+}
+input::placeholder {
+	color: #9aa1aa;
+}
+input:hover {
+	border-color: #cbd1d9;
+}
+input:focus {
+	border-color: var(--primary);
+	box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+/* =========================================================
+   Information text
+   ========================================================= */
+.info {
+	margin-top: 14px;
+	color: var(--text-secondary);
+	font-size: 14px;
+	line-height: 1.6;
+}
+#statistics {
+	margin-top: 22px;
+	padding: 14px 16px;
+	background: var(--primary-light);
+	border: 1px solid #dbeafe;
+	border-radius: 10px;
+	color: #334155;
+}
+#bewertung {
+	margin-top: 12px;
+	font-weight: 600;
+	color: var(--text);
+}
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 750px) {
+	.Header {
+		padding: 24px 20px;
+	}
+	.Header h1 {
+		font-size: 24px;
+	}
+	.Intro,
+	.Testarea {
+		width: min(100% - 32px, 600px);
+	}
+	.Intro {
+		margin-top: 24px;
+		padding: 22px;
+	}
+	.Testarea {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+	.test1,
+	.test2 {
+		padding: 22px;
+	}
+}
+@media (max-width: 400px) {
+	.Intro,
+	.Testarea {
+		width: calc(100% - 24px);
+	}
+	.test1,
+	.test2,
+	.Intro {
+		padding: 18px;
+	}
+}

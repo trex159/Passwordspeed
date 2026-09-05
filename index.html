@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Passwort Übung</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="Header">
+			<h1>Passwort Übung</h1>
+            <button id="resetButton">Zurücksetzen</button>
+		</div>
+		<div class="Intro">
+			<input type="text" id="passwordInput" placeholder="Geben Sie Ihr Passwort ein">
+			<p class="info">Geben Sie ihr Passwort hier ein, es bleibt Alles lokal. Sie werden üben können es Schnelll und später dazu blind zu tippen.</p>
+		</div>
+		<section class="Testarea">
+			<div class="test1">
+				<h1>Tippe dein Passwort Schnell</h1>
+				<input type="text" id="test1_txt" placeholder="Hier dein Passwort eingeben">
+				<p class="info">Tippe dein Passwort so schnell wie möglich. Du kannst es auch blind tippen.</p>
+				<p class="info" id="statistics1">Fehlerquote: X%<br>Tempo: X PPM (passwords per minute)</p>
+				<p class="info" id="bewertung1">Du kannst es X tippen</p>
+			</div>
+			<div class="test2">
+				<h1>Tippe dein Passwort Schnell</h1>
+				<input type="password" id="test2_txt" placeholder="Hier dein Passwort eingeben">
+				<p class="info">Tippe dein Passwort blind so schnell wie möglich. Du kannst es auch blind tippen.</p>
+				<p class="info" id="statistics2">Fehlerquote: X%<br>Tempo: X PPM (passwords per minute)</p>
+				<p class="info" id="bewertung2">Du kannst es X tippen</p>
+			</div>
+		</section>
+		<script src="script.js"></script>
+	</body>
+
+</html>
